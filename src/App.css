@@ -1,38 +1,164 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Smooch&family=Yellowtail&display=swap");
+:root {
+  --orange: #e35205;
+}
+html {
+  font-size: 62.5%; /* 16px x 62.5 = 10px = 1rem */
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+body {
+  margin: 0;
+  height: 100vh;
+  font-size: 1.6rem;
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+li {
+  list-style: none;
+}
+#root {
+  height: 100%;
+}
+.theme-dark {
+  background-color: #000;
+  color: #f5f5f7;
+}
+.theme-dark-reversed {
+  color: #f5f5f7;
+  background-color: #202121;
+}
+.img-fit-contain {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.main .hide {
+  display: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 1fr 5rem;
+  height: 100%;
+  max-height: 100vh;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header {
+  grid-area: header;
+  /* background-color: #203040;
+  color: #ffffff; */
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main {
+  grid-area: main;
+}
+.main-section {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-image: url("https://images.pexels.com/photos/167699/pexels-photo-167699.jpeg?auto=compress&cs=tinysrgb&w=600");
+}
+.bg1 {
+  background-image: url("https://images.pexels.com/photos/12568190/pexels-photo-12568190.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load");
+}
+.bg2 {
+  background-image: url("https://images.pexels.com/photos/12323353/pexels-photo-12323353.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load");
+}
+.bg3 {
+  background-image: url("https://images.pexels.com/photos/12323326/pexels-photo-12323326.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load");
+}
+.bg4 {
+  background-image: url("https://images.pexels.com/photos/12166201/pexels-photo-12166201.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load");
+}
+.bg5 {
+  background-image: url("https://images.pexels.com/photos/97524/pexels-photo-97524.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+}
+.bg6 {
+  background-image: url("https://images.pexels.com/photos/7512085/pexels-photo-7512085.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+}
+.nav-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.toggle {
+  padding-left: 0.5rem;
+}
+.toggle span i {
+  padding-right: 0.5rem;
+  font-size: 3rem;
+  cursor: pointer;
+}
+.menu {
+  /* background-color: #203040;
+  color: #ffffff; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu > ul {
+  padding-left: 0;
+}
+.menu > ul > li {
+  font-size: 1.5rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+.menu > ul > li:hover {
+  color: #000;
+  background-color: #f5f5f7;
+}
+.footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.logo {
+  display: flex;
+  align-items: flex-start;
+}
+.nav-left:hover {
+  color: #000;
+  background-color: #f5f5f7;
+}
+.logo h1 {
+  font-family: Yellowtail;
+  font-size: 3rem;
+  margin: 0;
+}
+.logo span i {
+  padding-right: 0.5rem;
+  font-size: 1.5rem;
+  font-style: italic;
 }
 
-.App-link {
-  color: #61dafb;
+.userInfo {
+  margin-right: 3rem;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.userInfo span {
+  padding-left: 5rem;
+}
+.userInfo span i {
+  border: 1px solid black;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+.userInfo span i:hover {
+  cursor: pointer;
+  color: #000;
+  background-color: #f5f5f7;
+  border: 1px solid black;
 }
